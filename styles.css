@@ -1,0 +1,83 @@
+body {
+    padding: 30px;
+}
+
+.arrow {
+    position: absolute;
+    top: 280px;
+    left: 70px;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.description {
+    display: flex;
+}
+.color {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.green {
+    background-color: yellowgreen;
+}
+.pink {
+    background-color: #f06;
+}
+.yellow {
+    background-color: gold;
+}
+
+.circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle .button {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: orangered;
+    border-radius: 50%;
+    margin: 0 auto;
+    outline: none;
+    border-color: oldlace;
+}
+
+.circle .button:focus {
+    outline: none;
+}
+
+.items {
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(yellowgreen 70%, gold 0 80%, #f06 0);
+    border-radius: 50%;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
