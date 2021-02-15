@@ -1,23 +1,27 @@
 function ClickSpin() {
     const button = document.getElementById("button");
-    button.addEventListener("click", function(e) {
+    button.addEventListener("click", function (e) {
+        let header = document.getElementById("header");
         let pie = document.getElementById("items");
         pie.classList.add("spin");
+        const random = Math.floor(Math.random() * 1200 + 1200);
         setTimeout(() => {
-            // pie.classList.remove('spin');
-            // pie.classList.add("spin");
-            let computedStyle = window.getComputedStyle(pie);
-                let transf = computedStyle.getPropertyValue('transform');
-                pie.style.transform = transf;
-            pie.style.animationDuration = "1000ms";
-            const random = Math.floor(Math.random() * 1000);
+            pie.style.animationDuration = "600ms";
+        }, 1200);
+        setTimeout(() => {
+            pie.style.animationDuration = "850ms";
+
             setTimeout(() => {
-                let computedStyle = window.getComputedStyle(pie);
-                let transf = computedStyle.getPropertyValue('transform');
-                pie.style.transform = transf;
-                pie.classList.remove("spin");
-                pie.style.animationDuration = "700ms";
+                setStyle(pie);
             }, random);
-        }, 2100);
+        }, 3200);
     })
+}
+
+function setStyle(pie) {
+    let computedStyle = window.getComputedStyle(pie);
+    let transf = computedStyle.getPropertyValue('transform');
+    pie.style.transform = transf;
+    pie.classList.remove("spin");
+    pie.style.animationDuration = "400ms";
 }

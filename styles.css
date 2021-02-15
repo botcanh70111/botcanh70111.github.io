@@ -2,9 +2,15 @@ body {
     padding: 30px;
 }
 
+.nhaidohoi {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 .arrow {
     position: absolute;
-    top: 280px;
+    top: 480px;
     left: 70px;
     z-index: 2;
     font-weight: bold;
@@ -62,22 +68,24 @@ body {
 .items {
     width: 400px;
     height: 400px;
-    background: conic-gradient(yellowgreen 70%, gold 0 80%, #f06 0);
+    background: conic-gradient(yellowgreen 80%, gold 0 85%, #f06 0);
     border-radius: 50%;
 }
 
 .spin {
-    animation-name: spin;
-    animation-duration: 700ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
+    animation: spin 400ms linear infinite;
 }
 
 @keyframes spin {
+    /* 100% {
+        transform: rotate(360deg);
+    } */
+
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
