@@ -63,7 +63,8 @@
 <script>
 	function isSpinned() {
 		const ip = localStorage.getItem("ip");
-		if (ip == null || ip == '') {
+		const tienlixihientai = localStorage.getItem("tienlixihientai");
+		if (tienlixihientai == null || tienlixihientai == '') {
 			return false;
 		}
 		else {
